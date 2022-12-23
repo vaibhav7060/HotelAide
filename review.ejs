@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HotelAide</title>
+  <link rel="stylesheet" href="/css/review.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/
+  font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-e7rrJcwDc/3uDhsdt61sL2oOBY362qM31on1gyExkL0=" crossorigin="anonymous" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">HotelAide</label>
+    <ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/log-in">Log-In</a></li>
+      <li><a href="/sign-up">Sign-Up</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/terms">T&C</a></li>
+    </ul>
+  </nav>
+
+  <section class="section-logo-image">
+  </section>
+
+
+  <form class="" action="/review" method="post" enctype="application/x-www-form-urlencoded" enctype="multipart/form-data" action="submit.php">
+    <section class="review-section-height">
+
+
+      <section class="review-section">
+        <div class="review-section-div">
+          <div class="user-name-review">
+            <label for="hotel-name">User Name:</label>
+            <input type="text" id="user-id-name" name="userName" placeholder="User Name" size="40"><br>
+          </div>
+          <div class="review-hotel-name">
+
+
+            <label for="hotel-name">Hotel Name:</label>
+            <input type="text" id="hotel-id-name" name="hotelName" placeholder="Hotel Name" size="40"><br>
+          </div>
+          <div class="hotel-address-div">
+
+
+            <label for="hotel-address-name">Hotel Address:</label>
+            <input type="text" id="hotel-id-address" name="hotelAddress" placeholder="Hotel Address" size="40"><br>
+          </div>
+        </div>
+      </section>
+
+      <section class="star-rating-section">
+
+
+
+
+        <div class="food-experience-div">
+
+
+          <h5>Rate your experience in hotel:</h5>
+          <div class="rating">
+
+            <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+            <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+            <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+            <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+            <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+
+          </div>
+        </div>
+
+
+      </section>
+    </section>
+
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="image">
+          <img width="50%" height="450vh" src="" alt="">
+        </div>
+        <div class="content">
+          <div class="icon">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <div class="text">
+            No file chosen, yet!
+          </div>
+        </div>
+        <div id="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="file-name">
+          File name here
+        </div>
+      </div>
+      <input name="file" id="default-btnn" type="file" >
+    </div>
+
+
+
+    <section class="overall-user-review">
+      <div class="overall-user-review-div">
+        <label for="experience-write-box">Write your experience:</label><br>
+        <textarea class="experience-textarea" name="experience" rows="10" cols="47" placeholder="Elaborate your experince in the hotel..."></textarea>
+      </div>
+
+    </section>
+
+
+
+    <section>
+      <div class="post-button">
+        <button class="submit-button btn btn-primary" type="submit" name="button">Post</button>
+      </div>
+    </section>
+  </form>
+
+
+
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+      const fileName = document.querySelector(".file-name");
+      const defaultBtn = document.querySelector("#default-btnn");
+      const customBtn = document.querySelector("#custom-btn");
+      const cancelBtn = document.querySelector("#cancel-btn i");
+      const img = document.querySelector("img");
+      let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+
+      function defaultBtnActive() {
+        defaultBtnn.click();
+      }
+      defaultBtn.addEventListener("change", function() {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function() {
+            const result = reader.result;
+            img.src = result;
+            wrapper.classList.add("active");
+          }
+          cancelBtn.addEventListener("click", function() {
+            img.src = "";
+            wrapper.classList.remove("active");
+          })
+          reader.readAsDataURL(file);
+        }
+        if (this.value) {
+          let valueStore = this.value.match(regExp);
+          fileName.textContent = valueStore;
+        }
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

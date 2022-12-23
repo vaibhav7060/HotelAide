@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Navbar with Search Box | CodingNepal</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="menu-icon">
+      <span class="fas fa-bars"></span>
+    </div>
+    <div class="logo">
+      HotelAide
+    </div>
+    <div class="nav-items">
+      <li><a href="/">Home</a></li>
+      <li><a href="/Privacy">Privacy</a></li>
+      <li><a href="/review">Review</a></li>
+      <li><a href="/log-in">Log In</a></li>
+      <li><a href="/sign-up">Sign Up</a></li>
+    </div>
+    <div class="search-icon">
+      <span class="fas fa-search"></span>
+    </div>
+    <div class="cancel-icon">
+      <span class="fas fa-times"></span>
+    </div>
+    <form action="#">
+      <input type="search" class="search-data" placeholder="Search" required>
+      <button type="submit" class="fas fa-search"></button>
+    </form>
+  </nav>
+
+  <section class="first-half-images">
+    <div class="banner">
+
+      <div class="slider">
+        <img src="\images\Palace hotel Image.jpg" width="100%" height="600vh" alt="">
+        <div class="overlay">
+          <div class="content-image">
+            <h1>HotelAide</h1>
+            <h2><b>View and Review Hotels</b></h2>
+            <div>
+              <a href="/review">
+              <button type="submit" name="button">Review</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="third-row">
+    <h2>HotelAide</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  </section>
+
+
+
+  <section class="white-section" id="footer">
+    <div class="container-fluid">
+      <h4><b>Contact us via:</b></h4>
+
+
+
+      <a href="https://twitter.com/DarshanMudbasal?t=EUVZTsh9z2dnye3n3hwIQg&s=08"><i class="social-icon fab fa-twitter"></i></a>
+      <a href="/email"><i class="social-icon fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ankith-jh-b024bb259"><i class='social-icon fab fa-linkedin'></i></a>
+      <a href="https://instagram.com/_x_darshan_x_?igshid=YmMyMTA2M2Y="><i class="social-icon fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <section class="privacy-bar">
+    <div class="privacy-link">
+      <a class="privacy-link-address" href="/privacy">Privacy</a>
+    </div>
+    <div class="terms-link">
+      <a class="terms-link-address" href="/terms">Terms & Conditions</a>
+    </div>
+  </section>
+
+
+
+  <section class="last-section">
+    <div class="copyright">
+      <p>© <%= presentyear %> by HotelAide</p>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = () => {
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = () => {
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = () => {
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+</body>
+
+</html>
